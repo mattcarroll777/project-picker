@@ -6,7 +6,7 @@ import styles from './index.module.css';
 export default function Home() {
   const [age, setAge] = useState(28);
   const [skill, setSkill] = useState('beginner');
-  const [time, setTime] = useState('One Day');
+  const [time, setTime] = useState('A Weekend');
   const [language, setLanguage] = useState('JavaScript');
 
   const [loading, setLoading] = useState(false);
@@ -46,7 +46,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h3> Programmer Project 🎁 💡</h3>
+        <h3> 💡 Programmer Project Picker 💡</h3>
         <form onSubmit={onSubmit}>
           <label>What is your skill Level?</label>
           <select
@@ -90,23 +90,25 @@ export default function Home() {
 
           <input type="submit" value="Generate Project Idea" />
         </form>
+
         {loading && (
           <div>
-            <h3>Looking for the best project idea 🎁 💡</h3>
+            <h3>Looking for the best project idea 💡</h3>
             <img src="/loading.webp" className={styles.loading} />
           </div>
         )}
 
-        <div className={styles.result}>{result}</div>
-        <div className={styles.result}>{step}</div>
-        <div className={styles.result}>{example}</div>
+        {result != '' && (
+          <div className={styles.resultContainer}>
+            <div className={styles.resultHeading}> Project Title: </div>
+            <div className={styles.result}>{result}</div>
+            <div className={styles.resultHeading}> Project Steps:</div>
+            <div className={styles.result}> {step}</div>
+            <div className={styles.resultHeading}> Similar Projects:</div>
+            <div className={styles.result}>{example}</div>
+          </div>
+        )}
       </main>
     </div>
   );
-}
-{
-  /* <div
-          className={styles.result}
-          dangerouslySetInnerHTML={{ __html: result }}
-        /> */
 }

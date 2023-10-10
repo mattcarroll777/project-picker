@@ -20,6 +20,12 @@
   color: #353740;
   font-family: 'ColfaxAI', Helvetica, sans-serif;
 }
+.main select {
+  font-size: 16px;
+  line-height: 24px;
+  color: #353740;
+  font-family: 'ColfaxAI', Helvetica, sans-serif;
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -45,6 +51,7 @@
   color: #8e8ea0;
   opacity: 1;
 }
+
 .main input[type='submit'] {
   padding: 12px 0;
   color: #fff;
@@ -53,10 +60,6 @@
   border-radius: 4px;
   text-align: center;
   cursor: pointer;
-}
-.main .result {
-  font-weight: bold;
-  margin-top: 40px;
 }
 
 .main .loading {
@@ -70,5 +73,23 @@
   border: 1px solid #10a37f;
   border-radius: 4px;
   margin-bottom: 12px;
+  margin-top: 4px;
+}
+
+.resultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultHeading {
+  color: #10a37f;
+  font-weight: bold;
+  margin-top: 16px;
+  font-size: 20px;
+}
+
+.result {
+  color: #202123;
   margin-top: 4px;
 }
