@@ -94,7 +94,7 @@ export default function Home() {
         {loading && (
           <div>
             <h3>Looking for the best project idea 💡</h3>
-            <img src="/loading.webp" className={styles.loading} />
+            {/* <img src="/loading.webp" className={styles.loading} /> */}
           </div>
         )}
 
